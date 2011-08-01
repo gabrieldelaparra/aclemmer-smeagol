@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"></meta>
+    <title>Smeagol</title>
+
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.grid.css" />
+    <link rel="stylesheet" type="text/css" href="css/redmond/jquery-ui-1.7.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick/slick-default-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout/layout-default-latest.css" />
+    <link rel="stylesheet" type="text/css" href="css/smeagol.css" />
+    <link rel="stylesheet" type="text/css" href="css/finder.css" />
+
+    <script type="text/javascript" src="js/lib/jquery-1.4.2.min.js"></script>
+    <script>
+      var $j = jQuery.noConflict();
+    </script>
+    <script language="JavaScript" src="js/lib/jquery-ui-1.7.3.custom.min.js"></script>
+    <script language="JavaScript" src="js/lib/jquery.rule-1.0.1.1-min.js"></script>
+    <script language="JavaScript" src="js/lib/jquery.event.drag.custom.js"></script>
+    <script language="JavaScript" src="js/lib/jquery.layout.min.js"></script>
+    <script language="JavaScript" src="js/lib/slick.remotemodel.js"></script>
+    <script language="JavaScript" src="js/lib/slick.grid.js"></script>
+
+    <script src="js/shared_js.php" type="text/javascript"></script>
+    <script src="js/loading.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/finder.js" type="text/javascript" charset="utf-8"></script>
+
+    <body>
+        <div id="finderContent">
+            <div id="findHeader">
+                Smeagol
+            </div>
+            <form id="findForm" onsubmit="return smeagol.find();">
+                <input type="text" name="keyword" value="" id="searchBox"/>
+                <input type="submit" value="Search" id="searchButton" />
+            </form>
+            <div id="findGrid"></div>
+        </div>
+    </body>
+</head>
+</html>

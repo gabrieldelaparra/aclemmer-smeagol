@@ -1,0 +1,4 @@
+^server/project/build
+^server/project/dist
+^server/project/nbproject/private
+^util

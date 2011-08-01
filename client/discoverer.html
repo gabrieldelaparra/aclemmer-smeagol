@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></meta>
+    <title>Smeagol</title>
+
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.grid.css" />
+    <link rel="stylesheet" type="text/css" href="css/redmond/jquery-ui-1.7.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick/slick-default-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout/layout-default-latest.css" />
+    <link rel="stylesheet" type="text/css" href="css/smeagol.css" />
+
+    <script type="text/javascript" src="js/lib/jquery-1.4.2.min.js"></script>
+    <script>
+      var $j = jQuery.noConflict();
+    </script>
+    <script type="text/javascript" src="js/lib/jquery.overlaps.js"></script>
+    <script language="JavaScript" src="js/lib/jquery-ui-1.7.3.custom.min.js"></script>
+		<script language="JavaScript" src="js/lib/jquery.rule-1.0.1.1-min.js"></script>
+		<script language="JavaScript" src="js/lib/jquery.event.drag.custom.js"></script>
+		<script language="JavaScript" src="js/lib/jquery.layout.min.js"></script>		
+		<script language="JavaScript" src="js/lib/slick.remotemodel.js"></script>
+    <script language="JavaScript" src="js/lib/slick.grid.js"></script>
+
+    <script language="JavaScript" src="js/lib/jit.js"></script>
+
+    <script language="JavaScript" src="js/lib/json2.js"></script>
+    <script language="JavaScript" src="js/lib/ZeroClipboard.js"></script>
+    <script language="JavaScript" src="js/lib/md5.js"></script>
+
+    <script src="js/shared_js.php" type="text/javascript"></script>
+    <script language="JavaScript" src="js/smeagol.js"></script>
+    <script language="JavaScript" src="js/smeagol_resource.js"></script>
+    <script language="JavaScript" src="js/smeagol_sparql.js"></script>
+    <script language="JavaScript" src="js/smeagol_graph.js"></script>
+    <script language="JavaScript" src="js/smeagol_inspector.js"></script>
+    <script language="JavaScript" src="js/smeagol_results.js"></script>
+    <script language="JavaScript" src="js/smeagol_dialogs.js"></script>
+    <script language="JavaScript" src="js/loading.js"></script>
+
+  </head>
+  <body>
+      <div id="topMenu" class="ui-layout-north container">
+      	  <a href="finder.html">Start Over</a>
+      	  | <a href="#" id="saveState">Save</a>
+      	  | <a href="#" id="loadState">Load</a>
+      	  | <span id="d_clip_container" style="position:relative">
+   					<a id="d_clip_button">Copy Results to Clipboard</a>
+					</span>
+      	  | <input type="checkbox" id="hideURIs" checked="true" /><label for="hideURIs">Hide URIs</label>
+      </div>
+
+      <div id="infoPane" class="ui-layout-west ui-widget container">
+        <div class="ui-widget-header">Inspector</div>
+        	<div id="info_subject"></div>
+        <div class="ui-layout-content">
+          <div id="infoGrid"></div>
+        </div>
+      </div>
+
+      <div class="ui-layout-center container">
+        <div class="center-center ui-widget container" id="graphPane">
+          <div class="ui-widget-header">Query Visualizer</div>
+          <div id="infovisContainer" class="ui-layout-content ui-widget-content">
+            <div id="infovis"></div>
+          </div>
+          <div id="infovisPopup" class="ui-widget-reset ui-layout-ignore ui-widget-content">
+            <div class="ui-widget-header">Configure</div>
+            <div class="widget-inner">
+              <span id="infovisPopupName" resourceId=""></span><br/>
+              <a href="#" id="infovisPopupRemove">Remove from query</a><br/>
+              <a href="#" id="infovisPopupWildcard">Set Wildcard</a><br/>
+              <a href="#" id="infovisPopupClose">Close</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-south ui-widget container" id="resultsPane">
+          <div class="ui-widget-header">Results</div>
+          <div class="ui-layout-content" id="resultsGrid"></div>
+          <div class="spacer"></div>
+        </div>
+      </div>
+
+      <div id="resultsColumnPopup" class="ui-widget-reset ui-layout-ignore ui-widget-content">
+        <div class="ui-widget-header">Configure</div>
+        <div class="widget-inner">
+          <a href="#" id="resultsColumnPopupHide">Hide from results</a><br/>
+          <a href="#" id="resultsColumnPopupClose">Close</a>
+        </div>
+      </div>
+
+
+			<div id="save-dialog" class="ui-layout-ignore" title="Save State">
+				<p id="save-dialog-tips"></p>
+				<form>
+					<label for="save-dialog-name">Name</label>
+					<input type="text" name="name" id="save-dialog-name" class="text ui-widget-content ui-corner-all" />
+				</form>
+			</div>
+
+
+			<div id="load-dialog" class="ui-layout-ignore" title="Load State">
+				<div id="load-tabs">
+					<ul>
+						<li><a href="#load-tabs-1">Packet</a></li>
+						<li><a href="#load-tabs-2">User</a></li>
+					</ul>
+					<div id="load-tabs-1">
+						<p id="load-dialog-tips"></p>
+						<form>
+						<label for="load-dialog-list-packet">State to load</label>
+						<select id="load-dialog-list-packet" size="6">
+						</select>
+						</form>
+					</div>
+					<div id="load-tabs-2">
+						<p id="load-dialog-tips"></p>
+						<form>
+						<label for="load-dialog-list-user">State to load</label>
+						<select id="load-dialog-list-user" size="6">
+						</select>
+						</form>
+					</div>
+				</div>
+			</div>      
+  </body>
+</html>

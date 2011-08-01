@@ -1,0 +1,292 @@
+html, body {
+  height:100%;
+  margin: 0;
+} 
+     
+h2 {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.container {
+		border-width:	0;
+		overflow:		hidden;
+		padding:		0;
+		display:		none; /* hide panes until layout initializes */
+	}
+
+#container {
+  height:100%;
+  /*width=1000px;
+  height=600px;*/
+}
+
+/*#topMenu {
+  width:100%;
+  text-align:right;
+}
+  
+#infoPane {
+  border: 1px solid black;
+  float:left;
+  width:25%;
+  height:100%;
+  //padding: 6px;
+}
+*/
+
+#infoPaneContent {
+  height: 85%;
+}
+
+#infoPaneControls {
+  height:15%;
+}
+
+/*
+#group1 {
+  float:right;
+  width:73%;
+  height:100%;
+}
+
+#graphPane {
+  border: 1px solid black;
+  width:100%;
+  height:49%;
+}
+*/
+
+#infovis {
+  width:100%;
+  height:90%;
+}
+
+/*
+#resultsPane {
+  border: 1px solid black;
+  width:100%;
+  height:49%;
+  margin-top:4px;
+}*/
+
+#resultsMenu {
+  width:100%;
+  text-align:right;
+  margin-bottom:8px;
+}
+
+
+
+.innerContent {padding: 6px;}
+
+tr.odd {background-color:#FFFFFF;}
+tr.even {background-color:#FFFFFF;}
+
+tr.odd td.sorting_1 {background-color:#FFFFFF;}
+tr.even td.sorting_1 {background-color:#FFFFFF;}
+
+table.display {border-bottom: 1px solid black; }
+
+
+#info_subject { 
+/*  text-decoration:underline;*/
+  margin-top: 4px;
+  margin-left: 10px;
+  margin-bottom:8px;
+  font-weight:bold;
+  font-size:0.9em;
+}
+
+#infoOptions {display:none;}
+
+
+#infovisPopup { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index:10000;
+}
+
+#resultsColumnPopup { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index:10000;
+}
+
+
+/*-----------------InfoVis stuff */
+
+#infovis {
+    /*position:relative;
+    width:650px;
+    height:250px;*/
+    margin:auto;
+    overflow:hidden;
+}
+
+/*TOOLTIPS*/
+.tip {
+    color: #111;
+    width: 139px;
+    background-color: white;
+    border:1px solid #ccc;
+    -moz-box-shadow:#555 2px 2px 8px;
+    -webkit-box-shadow:#555 2px 2px 8px;
+    -o-box-shadow:#555 2px 2px 8px;
+    box-shadow:#555 2px 2px 8px;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+    font-size:10px;
+    font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+    padding:7px;
+}
+
+
+.graphLabel {
+  background-color: transparent;
+  padding:4px;
+  z-index:auto;
+}
+
+div.graphLabel:hover {
+  padding:4px;
+  z-index:9999;
+}
+
+
+/*---------------- slickgrid stuff */
+#infoGrid {
+  background: white;
+  outline: 0;
+  border: 1px solid gray;
+  font-family: arial;
+  font-size: 8pt;
+	width:99%;
+	height:95%;"
+}
+
+#resultsGrid {
+  background: white;
+  outline: 0;
+  border: 1px solid gray;
+  font-family: arial;
+  font-size: 8pt;
+	width:99%;
+}
+
+.spacer {
+  width:100%;
+  height:10px;
+}
+
+
+.loading-indicator {
+	display: inline-block;
+	padding: 12px;
+	background: white;
+	-opacity: 0.5;
+	color: black;
+	font-weight: bold;
+	z-index: 9999;
+	border: 1px solid red;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 0 0 5px red;
+	-webkit-box-shadow: 0px 0px 5px red;
+	-text-shadow: 1px 1px 1px white;
+}
+
+.loading-indicator label {
+	padding-left: 20px;
+	background: url('../images/slick/ajax-loader-small.gif') no-repeat center left;
+}
+
+
+
+/*---------------- jqui tweaks */
+.ui-widget-header {
+  padding-left: 4px;
+}
+
+#infovisPopup .ui-widget-header {
+  font-size: 14px;
+}
+
+#resultsColumnPopup .ui-widget-header {
+  font-size:  14px;
+}
+
+
+.widget-inner {
+  padding: 8px;
+  font-size:14px;
+}
+
+.ui-dialog-title {
+  font-size: 14px;
+}
+
+.ui-dialog-buttonpane {
+  font-size: 12px;
+}
+
+.ui-tabs-nav {
+  font-size: 12px;
+  background: none;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#save-dialog {
+  font-size: 12px;
+}
+
+#load-dialog {
+  font-size: 12px;
+}
+
+#load-dialog #load-dialog-list-user,#load-dialog-list-packet {
+  width: 400px;
+}
+
+.ui-dialog-content {
+  padding: 0px !important;
+}
+
+
+
+#d_clip_button {
+/*  text-align:center; 
+  border:1px solid black; 
+  background-color:#ccc; 
+  margin:10px; padding:10px; */
+  text-decoration: underline;
+}
+#d_clip_button.hover { 
+  color:blue; 
+}
+/*d_clip_button.active { background-color:#aaa; }*/
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
