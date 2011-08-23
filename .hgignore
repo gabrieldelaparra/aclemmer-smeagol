@@ -2,3 +2,4 @@
 ^server/project/dist
 ^server/project/nbproject/private
 ^util
+.DS_Store
